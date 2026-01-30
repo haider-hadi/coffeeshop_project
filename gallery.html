@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Brew Haven</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-amber-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 bg-white/95 backdrop-blur-md shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-mug-hot text-amber-800 text-2xl"></i>
+                    <span class="text-2xl font-bold text-amber-900">Brew Haven</span>
+                </div>
+
+                <ul class="hidden md:flex gap-8 text-amber-900 font-semibold">
+                    <li><a href="index.html" class="hover:text-amber-700 transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-amber-700 transition-colors">About Us</a></li>
+                    <li><a href="menu.html" class="hover:text-amber-700 transition-colors">Menu</a></li>
+                    <li><a href="gallery.html" class="hover:text-amber-700 transition-colors">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-700 transition-colors">Contact</a></li>
+                </ul>
+
+                <button id="menuToggle" class="md:hidden text-amber-900 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <ul class="flex flex-col gap-3 text-amber-900 font-semibold">
+                    <li><a href="index.html" class="block hover:text-amber-700">Home</a></li>
+                    <li><a href="about.html" class="block hover:text-amber-700">About Us</a></li>
+                    <li><a href="menu.html" class="block hover:text-amber-700">Menu</a></li>
+                    <li><a href="gallery.html" class="block hover:text-amber-700">Gallery</a></li>
+                    <li><a href="contact.html" class="block hover:text-amber-700">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-12 px-4 bg-gradient-to-b from-amber-100 to-amber-50 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-amber-950">Our Gallery</h1>
+        <p class="text-xl text-amber-800 mt-4">Experience the Beauty of Brew Haven</p>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 flex items-center justify-center">
+                        <i class="fas fa-coffee text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Artisan Coffee Craft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center">
+                        <i class="fas fa-leaf text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Cozy Ambiance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-500 via-amber-600 to-amber-800 flex items-center justify-center">
+                        <i class="fas fa-mug-hot text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Perfect Pour</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-700 flex items-center justify-center">
+                        <i class="fas fa-water text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Latte Art</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-400 via-amber-500 to-amber-800 flex items-center justify-center">
+                        <i class="fas fa-chair text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Relaxing Seating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-500 via-amber-600 to-amber-900 flex items-center justify-center">
+                        <i class="fas fa-people-group text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Community</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group sm:col-span-1 lg:col-span-1">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700 flex items-center justify-center">
+                        <i class="fas fa-book text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Study Spot</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group sm:col-span-1 lg:col-span-1">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-400 via-amber-600 to-amber-900 flex items-center justify-center">
+                        <i class="fas fa-cake-candles text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Fresh Pastries</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg h-64 cursor-pointer group sm:col-span-1 lg:col-span-1">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-500 via-amber-700 to-amber-900 flex items-center justify-center">
+                        <i class="fas fa-sun text-6xl text-white opacity-40"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-search-plus text-4xl mb-3"></i>
+                            <p class="font-semibold">Outdoor Seating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Description Section -->
+    <section class="py-20 px-4 bg-gradient-to-b from-white to-amber-50">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-amber-950 mb-8">What You'll Find Here</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <i class="fas fa-coffee text-5xl text-amber-800 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-amber-900 mb-2">Perfect Craft</h3>
+                    <p class="text-amber-700">Every cup is crafted with precision and care by our skilled baristas.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <i class="fas fa-heart text-5xl text-amber-800 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-amber-900 mb-2">Warm Welcome</h3>
+                    <p class="text-amber-700">Feel at home in our cozy, welcoming atmosphere designed for relaxation.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <i class="fas fa-users text-5xl text-amber-800 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-amber-900 mb-2">Community</h3>
+                    <p class="text-amber-700">Connect with fellow coffee enthusiasts and make lasting friendships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-mug-hot"></i> Brew Haven
+                    </h3>
+                    <p class="text-amber-100">Your daily destination for premium coffee and warm hospitality.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-amber-100">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-white transition">Menu</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Hours</h4>
+                    <ul class="space-y-2 text-amber-100">
+                        <li>Mon - Fri: 6:00 AM - 8:00 PM</li>
+                        <li>Sat - Sun: 7:00 AM - 9:00 PM</li>
+                        <li>Holidays: Call for hours</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-amber-800 pt-8 text-center text-amber-200">
+                <p>&copy; 2026 Brew Haven. All rights reserved. | Crafted with <i class="fas fa-heart text-red-500"></i> for coffee lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
